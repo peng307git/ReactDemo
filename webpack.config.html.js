@@ -23,7 +23,7 @@ module.exports = {
   plugins:[
   new htmlWebpackPlugin({
         title:"helloyes",
-        filename:'body.html',   //自动生成的文件名称
+        filename:'body_1.html',   //自动生成的文件名称
         chunks:['app']          //自动生成文件的入口js        
   })  
   ]
