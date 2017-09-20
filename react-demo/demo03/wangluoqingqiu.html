@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>网络请求触发状态变化</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script type="text/javascript" src="../build/jquery.min.js"></script>
+    <script type="text/javascript" src="../build/react-0.14.0.js"></script>
+    <script type="text/javascript" src="../build/react-dom-0.14.0.js"></script>
+    <script type="text/javascript" src="../build/browser.min.js"></script>
+</head>
+<body>
+    <h1><span class="label label-info">demo3</span></h1>
+    <br><br><br>
+    <section class="well" id="well">
+        
+    </section>
+    <script type="text/babel">
+    var Text = React.createClass({
+            render:function(){
+                return(
+                    <div className="col-xs-12">
+                        <div className= { 122 % 2 == 0 ? "hidden" : "col-xs-6 alert alert-success" } >
+                            <span>最后一位奇数</span>
+                        </div>
+                        <div className={ 122 % 2 == 0 ? "hidden" : "col-xs-6 alert alert-danger" }>
+                            <span>最后一位是偶数</span>
+                        </div>
+                    </div>
+                );
+            }
+        });
+        ReactDOM.render(
+                <Text></Text>,
+                document.getElementById("well")
+        )
+
+    </script>
+</body>
+</html>
